@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    color: #5C7457;
+    font-family: 'kalam';
+  }
+    .decorative {
+    font-family: trattatello;
+    font-size: 48px;
+    }
+    .button {
+      background-color: #bbcbb9;
+      border: 5px solid  #5C7457;
+      border-radius: 10px;
+      border-style: inset;
+      text-align: center;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      width: 100%;
+      display: inline-block;
+
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+    .onethird {
+    width: 32%;
+  }
+  
+  .playercard {
+    border: 5px #5C7457 solid;
+    width: 49%;
+    text-align: center;
+  }
+  .computercard {
+    border: 5px #5C7457 solid;
+    width: 49%;
+    text-align: center;
+  }
+</style>
+  <title>You played rock!</title>
+
+  <!-- Expand the number of characters we can use in the document beyond basic ASCII 🎉 -->
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <div class="row">
+    <div class="onethird">
+      <a href="/rock" class="button">
+        Play Rock
+      </a>
+    </div>
+
+  <div class="onethird">
+    <a href="/paper" class="button">
+      Play Paper
+    </a>
+  </div>
+
+  <div class="onethird">
+    <a href="/scissors" class="button">
+      Play Scissors
+    </a>
+  </div>
+</div>
+<h1> We played scissors!</h1>
+<% random = ["rock", "paper", "scissors"].sample %>
+
+<h1> They played <%=random %>!</h1>
+<%=if random == "rock"
+  p("We lost!")
+elsif random == "paper"
+  p("We won!")
+else
+  p("We tied!")
+end%>
+<a href="/">
+    <div style="text-align: center; font-size: 15px;">
+      Rules
+    </div>
+  </a>
